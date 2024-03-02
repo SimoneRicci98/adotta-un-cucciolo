@@ -1,38 +1,38 @@
-.App {
-  text-align: center;
+/* styles.css */
+:root {
+  --main-color: #FFA500; /* Orangish main color */
+  --background-color: #FFC266; /* Lighter shade of orange for backgrounds */
+  --text-color: #000000; /* Black text color for readability */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.root {
+  flex-grow: 1;
+  padding-bottom: 200px; /* Adjust padding to accommodate the sticky footer */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.appBar {
+  background-color: var(--main-color);
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: white; /* Light background for cards */
+  max-width: 345px;
+  margin: auto;
+}
+
+.footer {
+  background-color: var(--main-color); /* Footer background */
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  text-align: center;
+  padding: 10px 0;
 }
