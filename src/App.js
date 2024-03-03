@@ -15,39 +15,13 @@ function App() {
 
   const [dog, setDog] = useState(undefined);
 
-  const dogs = [
-    {
-      name: 'Orso',
-      image: orso
-    },
-    {
-      name: 'Bimba',
-      image: bimba,
-    },
-    {
-      name: 'Coco',
-      image: coco,
-    },
-    {
-      name: 'Rio',
-      image: rio,
-    },
-    {
-      name: 'Mamma',
-      image: mamma,
-    },
-    {
-      name: 'Papa',
-      image: papa,
-    },
-  ];
   return (
     <div className='root'>
       <AppBar position="static" style={{ backgroundColor: '#FFA500' }}>
         <Toolbar>
           {
             dog !== undefined &&
-            <IconButton onClick={() => { setDog(undefined) }} size='large'>
+            <IconButton onClick={() => { setDog(undefined); }} size='large'>
               <ArrowBackIcon />
             </IconButton>
           }
@@ -63,13 +37,13 @@ function App() {
       <footer className='footer'>
         <Container>
           <Typography variant="body2">
-            Se sei interessato ad adottare un cucciolo, scrivi o chiama:
+            Se sei interessato ad adottare un cucciolo, scrivi su whatsapp:
           </Typography>
           <Typography variant="body2">
-            Simone <a href='tel:3931413123'>3931413123</a>
+            Simone <a href='https://wa.me/3931413123'>3931413123</a>
           </Typography>
           <Typography variant="body2">
-            Cristina <a href='tel:3403741183'>3403741183</a>
+            Cristina <a href='https://wa.me/3403741183'>3403741183</a>
           </Typography>
         </Container>
       </footer>
