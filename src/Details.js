@@ -3,7 +3,6 @@ import { Card, Container, Typography, CardContent, Grid, Divider } from '@mui/ma
 
 const Details = (props) => {
     const { dog } = props;
-    console.log(dog.description);
     return <>
         <Container>
             <Grid container spacing={3}>

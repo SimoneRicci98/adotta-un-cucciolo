@@ -2,12 +2,6 @@ import React, { useState } from 'react';
 import { AppBar, Toolbar, Typography, Container, Card, CardContent, Grid, Link, IconButton } from '@mui/material';
 import './App.css';
 import Overview from './Overview';
-import orso from './images/Orso/Orso.jpeg';
-import bimba from './images/Bimba/Bimba.jpeg';
-import coco from './images/Coco/Coco.jpeg';
-import rio from './images/Rio/Rio.jpeg';
-import mamma from './images/Mamma/Mamma.jpeg';
-import papa from './images/Papa/Papa.jpeg';
 import Details from './Details';
 
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
