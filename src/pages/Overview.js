@@ -2,7 +2,7 @@
 import React from 'react';
 import { Typography, Container, Card, CardContent, Grid } from '@mui/material';
 import '../App.css';
-
+import StyledCard from '../components/StyledCard';
 import orso from '../images/Orso/Orso.jpeg';
 import bimba from '../images/Bimba/Bimba.jpeg';
 import coco from '../images/Coco/Coco.jpeg';
@@ -10,11 +10,16 @@ import rio from '../images/Rio/Rio.jpeg';
 import mamma from '../images/Mamma/Mamma.jpeg';
 import papa from '../images/Papa/Papa.jpeg';
 
+import CookieIcon from '@mui/icons-material/Cookie';
+
+
 const dogs = [
   {
-    name: 'Orso (maschio)',
+    name: 'Orso',
     gender: 'm',
     image: orso,
+    short_desc: 'Un piccolo gigante buono',
+    pitch_sale: 'Adoro il contatto umano, mi piace passare il tempo con i miei fratellini e farmi una dormita in una bella cuccia comoda',
     description:
       [
         "Orso è un tenero cucciolo con un cuore grande quanto il suo fascino! Nonostante sia il più grande della cucciolata si comporta in maniera tenera e dolce con i suoi fratellini e sorelline.",
@@ -24,9 +29,11 @@ const dogs = [
       ]
   },
   {
-    name: 'Bimba (femmina)',
+    name: 'Bimba',
     gender: 'f',
     image: bimba,
+    short_desc: 'La rubacuori',
+    pitch_sale: 'Le mie super guanciotte ti faranno innamorare, vienimi a trovare!',
     description:
       [
         "Bimba è la cucciola più adorabile che tu abbia mai visto! Con le sue guanciotte arancioni, sembra proprio un mix di dolcezza e allegria.",
@@ -36,9 +43,11 @@ const dogs = [
       ]
   },
   {
-    name: 'Coco (femmina)',
+    name: 'Coco',
     gender: 'f',
     image: coco,
+    short_desc: 'Giochiamo?!',
+    pitch_sale: 'Ogni scusa e momento è buono per giocare, lo facciamo insieme?',
     description:
       [
         "Coco è la cucciola più vivace e adorabile che tu possa immaginare! Il suo pelo riccio e scuro le conferisce un'aria di mistero e fascino, ma non lasciarti ingannare: dietro quell'aspetto c'è una vera birichina!",
@@ -48,8 +57,10 @@ const dogs = [
       ]
   },
   {
-    name: 'Rio (maschio)',
+    name: 'Rio',
     image: rio,
+    short_desc: 'Come il famoso carnevale',
+    pitch_sale: 'Sono un piccolo prinicipe della notte e ho già trovato famiglia!',
     gender: 'm',
     description:
       [
@@ -61,8 +72,24 @@ const dogs = [
       ]
   },
   {
+    name: 'Papà',
+    image: papa,
+    short_desc: 'Anch\'io cerco casa!',
+    pitch_sale:'Ciao, sono Bruno, un cucciolone classe 2022. Cerco una famiglia dinamica da amare per sempre.',
+    gender: 'm',
+    description:
+      [
+        "Bruno è un giovane e allegro cane (classe 2022), dolcissimo, dinamico ed esuberante.",
+        "Bruno adora e richiede il contatto umano, infatti la prima volta che lo abbiamo visto nel suo box, al Canile ENPA di Val della Torre, ha iniziato a saltellare e farsi coccolare con entusiasmo!",
+        "Nonostante la sua anima spensierata, Bruno cerca qualcosa di più nella vita: una famiglia dinamica da amare. Ecco perché è alla ricerca di una casa dove poter condividere tutto il suo amore e la sua gioia con persone che lo apprezzeranno per quello che è.",
+        "Se sei interessato a dare a Bruno la famiglia amorevole che merita, non esitare a contattare il Canile ENPA di Val della Torre per maggiori informazioni."
+      ]
+  },
+  {
     name: 'Mamma',
     image: mamma,
+    short_desc: 'Biscotto?',
+    pitch_sale:'Ciao, sono Jetta, arrivo dall\'Ucraina e ho trovato casa da Simone e Cristina.',
     gender: 'f',
     description:
       [
@@ -74,18 +101,6 @@ const dogs = [
         "In sintesi, Jetta è molto più di una semplice cagnolina: è un membro prezioso della famiglia, una compagna fedele e un esempio di amore incondizionato. La sua presenza rende ogni giorno un po' più speciale, così come sicuramente i suoi cuccioli."
       ]
   },
-  {
-    name: 'Papà',
-    image: papa,
-    gender: 'm',
-    description:
-      [
-        "Bruno è un giovane e allegro cane (classe 2022), dolcissimo, dinamico ed esuberante.",
-        "Bruno adora e richiede il contatto umano, infatti la prima volta che lo abbiamo visto nel suo box, al Canile ENPA di Val della Torre, ha iniziato a saltellare e farsi coccolare con entusiasmo!",
-        "Nonostante la sua anima spensierata, Bruno cerca qualcosa di più nella vita: una famiglia dinamica da amare. Ecco perché è alla ricerca di una casa dove poter condividere tutto il suo amore e la sua gioia con persone che lo apprezzeranno per quello che è.",
-        "Se sei interessato a dare a Bruno la famiglia amorevole che merita, non esitare a contattare il Canile ENPA di Val della Torre per maggiori informazioni."
-      ]
-  },
 ];
 const Overview = (props) => {
   const { setDog } = props;
@@ -93,15 +108,8 @@ const Overview = (props) => {
     <Container style={{ marginTop: "20px" }}>
       <Grid container spacing={3} className='cardContainer'>
         {dogs.map((dog, index) => (
-          <Grid item key={index} xs={12} sm={6} md={index > 3 ? 6 : 3}>
-            <Card className='card' style={{ backgroundColor: dog.gender === 'm' ? 'rgba(51, 153, 255, 0.5)' : 'rgba(255, 102, 204, 0.5)' }} onClick={() => { setDog(dog); }} hoverable>
-              <CardContent>
-                <img src={dog.image} alt={dog.name} style={{ width: "100%", height: "100%" }} />
-                <Typography gutterBottom variant="h5" component="h2">
-                  {dog.name}
-                </Typography>
-              </CardContent>
-            </Card>
+          <Grid item key={index} xs={12} sm={6} md={6}>
+           <StyledCard dog={dog}/>
           </Grid>
         ))}
       </Grid>

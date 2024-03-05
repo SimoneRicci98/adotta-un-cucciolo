@@ -25,27 +25,22 @@ function App() {
       <Container>
         <Grid container spacing={3} className='cardContainer'>
           <Grid item xs={12}>
-            <Card style={{width:"100%", margin:"auto", marginTop:"20px"}}>
+            <Card style={{ width: "100%", margin: "auto", marginTop: "20px" }}>
               <CardContent>
                 <Typography variant="h5" component="h2">
-                Cuccioli nati il 29 gennaio, disponibili per l'adozione da inizio aprile circa. Verranno dati microchippati, sverminati e con il primo vaccino.
-                  <br/>(Cliccare sulla foto per leggere la descrizione) 
+                  Cuccioli nati il 29 gennaio, disponibili per l'adozione da inizio aprile circa. Verranno dati microchippati, sverminati e con il primo vaccino.
+                  <br />(Cliccare sulla foto per leggere la descrizione)
                 </Typography>
-                <Typography variant="body2" style={{color:""}}>
-                 
+                <Typography variant="body2" style={{ color: "" }}>
+
                 </Typography>
-            
+
               </CardContent>
             </Card>
           </Grid>
         </Grid>
       </Container>
-      {
-        dog === undefined ?
-          <Overview setDog={setDog} />
-          :
-          <Details dog={dog} />
-      }
+      <Overview setDog={setDog} />
       <footer className='footer'>
         <Container>
           <Typography variant="body2">

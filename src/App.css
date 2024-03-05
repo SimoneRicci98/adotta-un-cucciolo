@@ -1,12 +1,10 @@
 /* styles.css */
 :root {
   --main-color: #FFA500; /* Orangish main color */
-  --background-color: #FFC266; /* Lighter shade of orange for backgrounds */
   --text-color: #000000; /* Black text color for readability */
 }
 
 body {
-  background-color: var(--background-color);
   color: var(--text-color);
 }
 
