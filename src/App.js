@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { AppBar, Toolbar, Typography, Container, Card, CardContent, Grid, Link, IconButton } from '@mui/material';
 import './App.css';
-import Overview from './Overview';
-import Details from './Details';
+import Overview from './pages/Overview';
+import Details from './pages/Details';
 
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 function App() {

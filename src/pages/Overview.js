@@ -1,18 +1,19 @@
 
 import React from 'react';
 import { Typography, Container, Card, CardContent, Grid } from '@mui/material';
-import './App.css';
+import '../App.css';
 
-import orso from './images/Orso/Orso.jpeg';
-import bimba from './images/Bimba/Bimba.jpeg';
-import coco from './images/Coco/Coco.jpeg';
-import rio from './images/Rio/Rio.jpeg';
-import mamma from './images/Mamma/Mamma.jpeg';
-import papa from './images/Papa/Papa.jpeg';
+import orso from '../images/Orso/Orso.jpeg';
+import bimba from '../images/Bimba/Bimba.jpeg';
+import coco from '../images/Coco/Coco.jpeg';
+import rio from '../images/Rio/Rio.jpeg';
+import mamma from '../images/Mamma/Mamma.jpeg';
+import papa from '../images/Papa/Papa.jpeg';
 
 const dogs = [
   {
     name: 'Orso (maschio)',
+    gender: 'm',
     image: orso,
     description:
       [
@@ -24,6 +25,7 @@ const dogs = [
   },
   {
     name: 'Bimba (femmina)',
+    gender: 'f',
     image: bimba,
     description:
       [
@@ -35,6 +37,7 @@ const dogs = [
   },
   {
     name: 'Coco (femmina)',
+    gender: 'f',
     image: coco,
     description:
       [
@@ -47,6 +50,7 @@ const dogs = [
   {
     name: 'Rio (maschio)',
     image: rio,
+    gender: 'm',
     description:
       [
         "Rio è il cucciolo più energico di tutti! Con il suo pelo liscio e nero sembra un piccolo dracula.",
@@ -59,6 +63,7 @@ const dogs = [
   {
     name: 'Mamma',
     image: mamma,
+    gender: 'f',
     description:
       [
         "Jetta è una mamma straordinaria. Portata via dalla guerra in Ucraina, adesso ha 4,5 anni e ha trovato la sua casa per sempre qui da noi.",
@@ -72,6 +77,7 @@ const dogs = [
   {
     name: 'Papà',
     image: papa,
+    gender: 'm',
     description:
       [
         "Bruno è un giovane e allegro cane (classe 2022), dolcissimo, dinamico ed esuberante.",
@@ -88,7 +94,7 @@ const Overview = (props) => {
       <Grid container spacing={3} className='cardContainer'>
         {dogs.map((dog, index) => (
           <Grid item key={index} xs={12} sm={6} md={index > 3 ? 6 : 3}>
-            <Card className='card' onClick={() => { setDog(dog); }} hoverable>
+            <Card className='card' style={{ backgroundColor: dog.gender === 'm' ? 'rgba(51, 153, 255, 0.5)' : 'rgba(255, 102, 204, 0.5)' }} onClick={() => { setDog(dog); }} hoverable>
               <CardContent>
                 <img src={dog.image} alt={dog.name} style={{ width: "100%", height: "100%" }} />
                 <Typography gutterBottom variant="h5" component="h2">
