@@ -1,45 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AppBar, Toolbar, Typography, Container, Card, CardContent, Grid, Link, IconButton } from '@mui/material';
 import './App.css';
 import Overview from './pages/Overview';
 
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 function App() {
+  const [cucciolo, setCucciolo] = useState(undefined)
 
-  const [dog, setDog] = useState(undefined);
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const c = params.get('cucciolo');
+    setCucciolo(c);
+  }, []); // Run this effect only once when the component mounts
 
   return (
     <div className='root'>
       <AppBar position="static" style={{ backgroundColor: '#FFA500' }}>
         <Toolbar>
-          {
-            dog !== undefined &&
-            <IconButton onClick={() => { setDog(undefined); }} size='large'>
-              <ArrowBackIcon />
-            </IconButton>
-          }
           <Typography variant="h6">Adotta un cucciolotto!</Typography>
         </Toolbar>
       </AppBar>
-      <Container>
+      <Container style={{marginTop:"20px"}}>
         <Grid container spacing={3} className='cardContainer'>
           <Grid item xs={12}>
-            <Card style={{ width: "100%", margin: "auto", marginTop: "20px" }}>
+            <Card style={{ width: "100%", margin: "0 auto" }}>
               <CardContent>
                 <Typography variant="h5" component="h2">
                   Cuccioli nati il 29 gennaio, disponibili per l'adozione da inizio aprile circa. Verranno dati microchippati, sverminati e con il primo vaccino.
                   <br />(Cliccare sulla foto per leggere la descrizione)
                 </Typography>
-                <Typography variant="body2" style={{ color: "" }}>
-
-                </Typography>
-
               </CardContent>
             </Card>
           </Grid>
         </Grid>
       </Container>
-      <Overview setDog={setDog} />
+      <Overview cucciolo={cucciolo} />
       <footer className='footer'>
         <Container>
           <Typography variant="body2">

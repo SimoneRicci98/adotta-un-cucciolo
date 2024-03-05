@@ -75,7 +75,7 @@ const dogs = [
     name: 'Papà',
     image: papa,
     short_desc: 'Anch\'io cerco casa!',
-    pitch_sale:'Ciao, sono Bruno, un cucciolone classe 2022. Cerco una famiglia dinamica da amare per sempre.',
+    pitch_sale: 'Ciao, sono Bruno, un cucciolone classe 2022. Cerco una famiglia dinamica da amare per sempre.',
     gender: 'm',
     description:
       [
@@ -89,7 +89,7 @@ const dogs = [
     name: 'Mamma',
     image: mamma,
     short_desc: 'Biscotto?',
-    pitch_sale:'Ciao, sono Jetta, arrivo dall\'Ucraina e ho trovato casa da Simone e Cristina.',
+    pitch_sale: 'Ciao, sono Jetta, arrivo dall\'Ucraina e ho trovato casa da Simone e Cristina.',
     gender: 'f',
     description:
       [
@@ -103,13 +103,13 @@ const dogs = [
   },
 ];
 const Overview = (props) => {
-  const { setDog } = props;
+  const { cucciolo } = props;
   return <>
     <Container style={{ marginTop: "20px" }}>
       <Grid container spacing={3} className='cardContainer'>
         {dogs.map((dog, index) => (
-          <Grid item key={index} xs={12} sm={6} md={6}>
-           <StyledCard dog={dog}/>
+          <Grid item key={index} xs={12} sm={6} md={4}>
+            <StyledCard dog={dog} cucciolo={cucciolo}/>
           </Grid>
         ))}
       </Grid>
