@@ -63,7 +63,7 @@ export default function StyledCard(props) {
     return (
 
         <Card sx={{ maxWidth: 345, margin: '0 auto' }} onClick={handleExpandClick}>
-            <section id={dog.name} name={dog.name}/>
+            <section id={dog.name} name={dog.name} />
             <CardHeader
                 avatar={
                     <Avatar sx={{ bgcolor: dog.gender === 'm' ? blue[500] : pink[100] }} aria-label="recipe">
@@ -76,7 +76,8 @@ export default function StyledCard(props) {
                     </IconButton>
                 }
                 title={dog.name}
-                subheader={dog.short_desc}
+                subheader={<>{dog.short_desc} <br/> {dog.adopted}</>}
+                style={{ backgroundColor: dog.adopted !== '' ? 'rgba(255, 218, 185, 0.3)' : 'white' }}
             />
 
             <CardMedia
@@ -84,18 +85,12 @@ export default function StyledCard(props) {
                 image={dog.image}
                 alt={dog.name}
             />
-            <CardContent>
+            <CardContent style={{ backgroundColor: dog.adopted !== '' ? 'rgba(255, 218, 185, 0.3)' : 'white' }}>
                 <Typography variant="body2" color="text.secondary">
                     {dog.pitch_sale}
                 </Typography>
             </CardContent>
-            <CardActions disableSpacing>
-                {/*<IconButton aria-label="add to favorites">
-                    <FavoriteIcon />
-                </IconButton>
-                <IconButton aria-label="share">
-                    <ShareIcon />
-            </IconButton>*/}
+            <CardActions disableSpacing style={{ backgroundColor: dog.adopted !== '' ? 'rgba(255, 218, 185, 0.3)' : 'white' }}>
                 <ExpandMore
                     expand={expanded}
                     onClick={handleExpandClick}
@@ -106,7 +101,7 @@ export default function StyledCard(props) {
                 </ExpandMore>
             </CardActions>
             <Collapse in={expanded} timeout="auto" unmountOnExit>
-                <CardContent>
+                <CardContent style={{ backgroundColor: dog.adopted !== '' ? 'rgba(255, 218, 185, 0.3)' : 'white' }}>
                     {dog.description.map(value => <Typography paragraph>{value}</Typography>)}
                 </CardContent>
             </Collapse>

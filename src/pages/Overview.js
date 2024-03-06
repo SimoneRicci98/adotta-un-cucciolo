@@ -7,6 +7,7 @@ import orso from '../images/Orso/Orso.jpeg';
 import bimba from '../images/Bimba/Bimba.jpeg';
 import coco from '../images/Coco/Coco.jpeg';
 import rio from '../images/Rio/Rio.jpeg';
+import mini from '../images/Mini/Mini.jpeg';
 import mamma from '../images/Mamma/Mamma.jpeg';
 import papa from '../images/Papa/Papa.jpeg';
 
@@ -16,6 +17,7 @@ const Overview = (props) => {
     [
       {
         name: 'Orso',
+        adopted: '',
         gender: 'm',
         image: orso,
         short_desc: 'Un piccolo gigante buono',
@@ -30,6 +32,7 @@ const Overview = (props) => {
       },
       {
         name: 'Bimba',
+        adopted: '(STOP RICHIESTE)',
         gender: 'f',
         image: bimba,
         short_desc: 'La rubacuori',
@@ -44,6 +47,7 @@ const Overview = (props) => {
       },
       {
         name: 'Coco',
+        adopted: '',
         gender: 'f',
         image: coco,
         short_desc: 'Giochiamo?!',
@@ -58,6 +62,7 @@ const Overview = (props) => {
       },
       {
         name: 'Rio',
+        adopted: '(STOP RICHIESTE)',
         image: rio,
         short_desc: 'Come il famoso carnevale',
         pitch_sale: 'Sono un piccolo prinicipe della notte e ho già trovato famiglia!',
@@ -72,7 +77,22 @@ const Overview = (props) => {
           ]
       },
       {
+        name: 'Mini',
+        adopted: '(STOP RICHIESTE)',
+        image: mini,
+        short_desc: 'La piccola di casa',
+        pitch_sale: 'Ogni riccio un capriccio',
+        gender: 'f',
+        description:
+          [
+            "Mini è un concentrato di dolcezza in forma di cucciola, la più piccola della cucciolata. Il suo pelo riccio e morbido la fa sembrare una pallina di peluche vivente.",
+            "Ciò che rende Mini adorabile è il suo amore per il fratello gigante Orso. Non c'è momento in cui non sia vicina a lui, seguendolo ovunque vada e appoggiandosi a lui per sicurezza e conforto. È come se Orso fosse il suo eroe personale, e lei la sua più grande fan.",
+            "Con Mini al tuo fianco, ogni giorno sarà pieno di amore, tenerezza e gioia. È il tipo di cucciola che ti ruberà il cuore al primo sguardo e non te lo restituirà mai più."
+          ]
+      },
+      {
         name: 'Papà',
+        adopted: '',
         image: papa,
         short_desc: 'Anch\'io cerco casa!',
         pitch_sale: 'Ciao, sono Bruno, un cucciolone classe 2022. Cerco una famiglia dinamica da amare per sempre.',
@@ -87,6 +107,7 @@ const Overview = (props) => {
       },
       {
         name: 'Mamma',
+        adopted: '',
         image: mamma,
         short_desc: 'Biscotto?',
         pitch_sale: 'Ciao, sono Jetta, arrivo dall\'Ucraina, adoro i biscotti e ho trovato casa da Simone e Cristina.',
