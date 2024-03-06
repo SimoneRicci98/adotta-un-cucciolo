@@ -14,7 +14,7 @@ import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const handleShareClick = async (dog) => {
-    const url = 'https://adotta-un-cucciolo.vercel.app/?cucciolo=' + dog.name
+    const url = 'https://adotta-un-cucciolo.vercel.app/?cucciolo=' + dog.name + '#' + dog.name;
     try {
         // Check if the Web Share API is supported
         if (navigator.share) {
@@ -51,17 +51,19 @@ const ExpandMore = styled((props) => {
 export default function StyledCard(props) {
     const { dog, cucciolo } = props;
     const [expanded, setExpanded] = React.useState(false);
-    React.useEffect(()=>{
+    React.useEffect(() => {
         if (cucciolo === dog.name)
             setExpanded(true)
-    },[cucciolo])
+    }, [cucciolo])
 
     const handleExpandClick = () => {
         setExpanded(!expanded);
     };
 
     return (
+
         <Card sx={{ maxWidth: 345, margin: '0 auto' }} onClick={handleExpandClick}>
+            <section id={dog.name} name={dog.name}/>
             <CardHeader
                 avatar={
                     <Avatar sx={{ bgcolor: dog.gender === 'm' ? blue[500] : pink[100] }} aria-label="recipe">
@@ -76,6 +78,7 @@ export default function StyledCard(props) {
                 title={dog.name}
                 subheader={dog.short_desc}
             />
+
             <CardMedia
                 component="img"
                 image={dog.image}

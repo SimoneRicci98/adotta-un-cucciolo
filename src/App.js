@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { AppBar, Toolbar, Typography, Container, Card, CardContent, Grid, Link, IconButton } from '@mui/material';
+import { AppBar, Toolbar, Typography, Container, Card, CardContent, Grid } from '@mui/material';
 import './App.css';
 import Overview from './pages/Overview';
 
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 function App() {
   const [cucciolo, setCucciolo] = useState(undefined)
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const c = params.get('cucciolo');
-    setCucciolo(c);
-  }, []); // Run this effect only once when the component mounts
+    setCucciolo(c)
+  }, []);
 
   return (
     <div className='root'>
