@@ -104,7 +104,7 @@ const Overview = (props) => {
     ]
 
   return <>
-    <Container style={{ margin: "20px 0" }}>
+    <Container style={{ margin: "20px auto" }}>
       <Grid container spacing={3} className='cardContainer'>
         {dogs.map((dog, index) => (
           <Grid item key={index} xs={12} sm={6} md={4}>
