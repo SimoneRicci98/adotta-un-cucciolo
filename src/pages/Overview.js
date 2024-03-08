@@ -17,7 +17,7 @@ const Overview = (props) => {
     [
       {
         name: 'Orso',
-        adopted: '',
+        adopted: '(STOP RICHIESTE)',
         gender: 'm',
         image: orso,
         short_desc: 'Un piccolo gigante buono',

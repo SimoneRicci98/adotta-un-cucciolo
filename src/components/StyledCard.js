@@ -60,10 +60,13 @@ export default function StyledCard(props) {
     const handleExpandClick = () => {
         setExpanded(!expanded);
     };
+    const handleClik = (e) => {
+        e.preventDefault();
+    }
 
     return (
 
-        <Card sx={{ maxWidth: 345, margin: '0 auto' }} onClick={handleExpandClick}>
+        <Card sx={{ maxWidth: 345, margin: '0 auto' }}>
             <section id={dog.name} name={dog.name} />
             <CardHeader
                 avatar={
@@ -82,6 +85,7 @@ export default function StyledCard(props) {
             />
 
             <CardMedia
+                onClick={handleExpandClick}
                 component="img"
                 image={dog.image}
                 alt={dog.name}
@@ -92,7 +96,7 @@ export default function StyledCard(props) {
                 </Typography>
             </CardContent>
             <CardActions disableSpacing style={{ backgroundColor: dog.adopted !== '' ? 'rgba(255, 218, 185, 0.3)' : 'white' }}>
-                {/* <Button >Segui la mia crescita!</Button>*/}
+                {/*<Button onClick={handleClik}>Segui la mia crescita!</Button>*/}
                 <ExpandMore
                     expand={expanded}
                     onClick={handleExpandClick}
