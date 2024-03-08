@@ -19,13 +19,14 @@ function App() {
           <Typography variant="h6">Adotta un cucciolotto!</Typography>
         </Toolbar>
       </AppBar>
-      <Container style={{marginTop:"20px"}}>
+      <Container style={{ marginTop: "20px" }}>
         <Grid container spacing={3} className='cardContainer'>
           <Grid item xs={12}>
             <Card style={{ width: "100%", margin: "0 auto" }}>
               <CardContent>
-                <Typography variant="h5" component="h2">
-                  Cuccioli nati il 29 gennaio, disponibili per l'adozione da inizio aprile circa. Verranno dati microchippati, sverminati e con il primo vaccino.
+                <Typography variant="h5" component="h2" style={{ color: "rgba(0, 0, 0, 0.87)" }}>
+                  Cuccioli nati il 29 gennaio, disponibili per l'adozione da metà aprile. Verranno dati microchippati, sverminati e con il primo vaccino.
+                  <br />Prima visita veterinaria effettuata il 07/03, godono tutti di ottima salute!
                   <br />(Cliccare sulla foto per leggere la descrizione)
                 </Typography>
               </CardContent>

@@ -12,6 +12,7 @@ import Typography from '@mui/material/Typography';
 import { blue, pink } from '@mui/material/colors';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { Button } from '@mui/material';
 
 const handleShareClick = async (dog) => {
     const url = 'https://adotta-un-cucciolo.vercel.app/?cucciolo=' + dog.name + '#' + dog.name;
@@ -54,7 +55,7 @@ export default function StyledCard(props) {
     React.useEffect(() => {
         if (cucciolo === dog.name)
             setExpanded(true)
-    }, [cucciolo])
+    }, [cucciolo, dog.name])
 
     const handleExpandClick = () => {
         setExpanded(!expanded);
@@ -76,7 +77,7 @@ export default function StyledCard(props) {
                     </IconButton>
                 }
                 title={dog.name}
-                subheader={<>{dog.short_desc} <br/> {dog.adopted}</>}
+                subheader={<>{dog.short_desc} <br /> {dog.adopted}</>}
                 style={{ backgroundColor: dog.adopted !== '' ? 'rgba(255, 218, 185, 0.3)' : 'white' }}
             />
 
@@ -91,6 +92,7 @@ export default function StyledCard(props) {
                 </Typography>
             </CardContent>
             <CardActions disableSpacing style={{ backgroundColor: dog.adopted !== '' ? 'rgba(255, 218, 185, 0.3)' : 'white' }}>
+                {/* <Button >Segui la mia crescita!</Button>*/}
                 <ExpandMore
                     expand={expanded}
                     onClick={handleExpandClick}
