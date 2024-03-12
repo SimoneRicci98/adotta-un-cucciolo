@@ -12,7 +12,6 @@ import Typography from '@mui/material/Typography';
 import { blue, pink } from '@mui/material/colors';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { Button } from '@mui/material';
 
 const handleShareClick = async (dog) => {
     const url = 'https://adotta-un-cucciolo.vercel.app/?cucciolo=' + dog.name + '#' + dog.name;
@@ -60,10 +59,27 @@ export default function StyledCard(props) {
     const handleExpandClick = () => {
         setExpanded(!expanded);
     };
+    const getBackgroundColor = () => {
+        switch (dog.adopted) {
+            case '(STOP RICHIESTE)':
+                return 'rgba(255, 218, 185, 0.3)'
+            case '(Nuovamente disponibile!)':   
+                return 'rgba(144, 238, 144, 0.3)'
+            default:
+                return 'white'
+        }
+    }
+    const openInNewTab = (url) => {
+  const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+  if (newWindow) newWindow.opener = null
+}
+    const onClickUrl = (url) => {
+        return () => openInNewTab(url)
+      }
 
     return (
 
-        <Card sx={{ maxWidth: 345, margin: '0 auto' }} onClick={handleExpandClick}>
+        <Card sx={{ maxWidth: 345, margin: '0 auto' }} >
             <section id={dog.name} name={dog.name} />
             <CardHeader
                 avatar={
@@ -78,20 +94,21 @@ export default function StyledCard(props) {
                 }
                 title={dog.name}
                 subheader={<>{dog.short_desc} <br /> {dog.adopted}</>}
-                style={{ backgroundColor: dog.adopted !== '' ? 'rgba(255, 218, 185, 0.3)' : 'white' }}
+                style={{ backgroundColor: getBackgroundColor() }}
+                onClick={handleExpandClick}
             />
-
             <CardMedia
                 component="img"
                 image={dog.image}
                 alt={dog.name}
+                onClick={onClickUrl(dog.url)}
             />
-            <CardContent style={{ backgroundColor: dog.adopted !== '' ? 'rgba(255, 218, 185, 0.3)' : 'white' }}>
+            <CardContent style={{ backgroundColor: getBackgroundColor() }} onClick={handleExpandClick}>
                 <Typography variant="body2" color="text.secondary">
                     {dog.pitch_sale}
                 </Typography>
             </CardContent>
-            <CardActions disableSpacing style={{ backgroundColor: dog.adopted !== '' ? 'rgba(255, 218, 185, 0.3)' : 'white' }}>
+            <CardActions disableSpacing style={{ backgroundColor: getBackgroundColor() }} onClick={handleExpandClick}>
                 {/* <Button >Segui la mia crescita!</Button>*/}
                 <ExpandMore
                     expand={expanded}
@@ -103,7 +120,7 @@ export default function StyledCard(props) {
                 </ExpandMore>
             </CardActions>
             <Collapse in={expanded} timeout="auto" unmountOnExit>
-                <CardContent style={{ backgroundColor: dog.adopted !== '' ? 'rgba(255, 218, 185, 0.3)' : 'white' }}>
+                <CardContent style={{ backgroundColor: getBackgroundColor() }}>
                     {dog.description.map(value => <Typography paragraph>{value}</Typography>)}
                 </CardContent>
             </Collapse>
