@@ -98,6 +98,7 @@ export default function StyledCard(props) {
                 onClick={handleExpandClick}
             />
             <CardMedia
+                onClick={handleExpandClick}
                 component="img"
                 image={dog.image}
                 alt={dog.name}
