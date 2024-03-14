@@ -31,7 +31,7 @@ function App() {
             <Card style={{ width: "100%", margin: "0 auto" }} onClick={handleExpandClick}>
               <CardContent>
                 <Typography variant="h5" component="h2" style={{ color: "rgba(0, 0, 0, 0.87)", padding: "5px 0" }}>
-                  Cuccioli nati il 29 gennaio, disponibili per l'adozione da metà aprile. Verranno dati microchippati, sverminati e con il primo vaccino.
+                  Cuccioli nati il 29 gennaio, futura taglia media (20-25kg), disponibili per l'adozione da metà aprile. Verranno dati microchippati, sverminati e con il primo vaccino.
                 </Typography>
                 <Typography variant="h6" component="h4" style={{ color: "#ffa500", padding: "5px 0" }}>
                   Se vuoi avere maggiori informazioni su un cucciolo specifico clicca sulla sua descrizione o sulla sua foto se vuoi vederne altre!
@@ -41,9 +41,6 @@ function App() {
                 </CardActions>
                 <Collapse in={expanded} timeout="auto" unmountOnExit>
                   <CardContent>
-                    {/*<Typography style={{ color: "rgba(0, 0, 0, 0.87)", padding: "5px 0" }}>
-                      I cuccioli sono un tripudio di energia e allegria, un vortice di vita che riempie la casa di risate e gioia. Non c'è momento noioso quando sono intorno, poiché si impegnano in giochi e interazioni senza fine. Con l'introduzione dei loro nuovi giocattoli, come palline e ossi di gomma, hanno scoperto un mondo di divertimento che li tiene occupati per ore.
-                    </Typography>*/}
                     <Typography style={{ color: "rgba(0, 0, 0, 0.87)", padding: "5px 0" }}>
                       Crescendo in un ambiente casalingo, i cuccioli si sono abituati alle persone e ai rumori tipici della vita quotidiana, come l'aspirapolvere che ronza e la televisione che mormora in sottofondo.
                     </Typography>
