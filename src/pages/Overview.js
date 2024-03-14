@@ -67,7 +67,7 @@ const Overview = (props) => {
       },
       {
         name: 'Rio',
-        adopted: '(Nuovamente disponibile!)',
+        adopted: '(STOP RICHIESTE)',
         image: rio,
         url:'https://www.dropbox.com/scl/fo/zkbxkle6e6y64o4ld7xk6/h?rlkey=5dkze0ptoo7mnfpebpb7fn1p8&dl=0',
         short_desc: 'Come il famoso carnevale',
