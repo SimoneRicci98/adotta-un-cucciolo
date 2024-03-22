@@ -15,14 +15,13 @@ const Overview = (props) => {
   const dogs =
     [
       {
-        name: 'Orso',
+        name: 'Orso (Boris)',
         adopted: '(STOP RICHIESTE)',
         gender: 'm',
         image: orso,
         url:'https://www.dropbox.com/scl/fo/cnawrnpedmtnfscsz6hg1/h?rlkey=wjlk01j4yae8vzkiusa1n5bpp&dl=0',
         short_desc: 'Un piccolo gigante buono',
         pitch_sale: 'Adoro le coccole, mi piace passare il tempo con i miei fratellini e farmi una dormita in una bella cuccia comoda',
-        wheight_progress:[{ date: "12-02-24", weight: 1600 }, { date: "16-02-24", weight: 1850 }, { date: "17-02-24", weight: 1960 }, { date: "18-02-24", weight: 2050 }, { date: "21-02-24", weight: 2300 }, { date: "22-02-24", weight: 2400 }, { date: "23-02-24", weight: 2400 }, { date: "26-02-24", weight: 2600 }, { date: "28-02-24", weight: 2890 }, { date: "01-03-24", weight: 3300 }, { date: "03-03-24", weight: 3400 }, { date: "07-03-24", weight: 3900 }],
         description:
           [
             "Orso è un tenero cucciolo con un cuore grande quanto il suo fascino! Nonostante sia il più grande della cucciolata si comporta in maniera tenera e dolce con i suoi fratellini e sorelline.",
@@ -32,14 +31,13 @@ const Overview = (props) => {
           ]
       },
       {
-        name: 'Bimba',
+        name: 'Bimba (Ariel)',
         adopted: '(STOP RICHIESTE)',
         gender: 'f',
         image: bimba,
         url:'https://www.dropbox.com/scl/fo/a6143fc54a6uvdnlez6rf/h?rlkey=528milnbm53omianx8bep1ydo&dl=0',
         short_desc: 'La rubacuori',
         pitch_sale: 'Le mie super guanciotte ti faranno innamorare, vienimi a trovare!',
-        wheight_progress:[{ date: "12-02-24", weight: 1290 }, { date: "16-02-24", weight: 1640 }, { date: "17-02-24", weight: 1710 }, { date: "18-02-24", weight: 1750 }, { date: "21-02-24", weight: 1900 }, { date: "22-02-24", weight: 1970 }, { date: "23-02-24", weight: 2040 }, { date: "26-02-24", weight: 2150 }, { date: "28-02-24", weight: 2320 }, { date: "01-03-24", weight: 2680 }, { date: "03-03-24", weight: 2800 }, { date: "07-03-24", weight: 3250 }],
         description:
           [
             "Bimba è la cucciola più adorabile che tu abbia mai visto! Con le sue guanciotte arancioni, sembra proprio un mix di dolcezza e allegria.",
@@ -56,7 +54,6 @@ const Overview = (props) => {
         url:'https://www.dropbox.com/scl/fo/teqyfvxisou9l323w0xl7/h?rlkey=hjh5j98rokwqvufk0smatn8my&dl=0',
         short_desc: 'Giochiamo?!',
         pitch_sale: 'Ogni scusa e momento è buono per giocare, lo facciamo insieme?',
-        wheight_progress:[{ date: "12-02-24", weight: 1400 }, { date: "16-02-24", weight: 1730 }, { date: "17-02-24", weight: 1830 }, { date: "18-02-24", weight: 1850 }, { date: "21-02-24", weight: 2060 }, { date: "22-02-24", weight: 2150 }, { date: "23-02-24", weight: 2160 }, { date: "26-02-24", weight: 2300 }, { date: "28-02-24", weight: 2570 }, { date: "01-03-24", weight: 3000 }, { date: "03-03-24", weight: 3150 }, { date: "07-03-24", weight: 3900 }],
         description:
           [
             "Coco è la cucciola più vivace e adorabile che tu possa immaginare! Il suo pelo riccio e scuro le conferisce un'aria di mistero e fascino, ma non lasciarti ingannare: dietro quell'aspetto c'è una vera birichina!",
@@ -72,7 +69,6 @@ const Overview = (props) => {
         url:'https://www.dropbox.com/scl/fo/zkbxkle6e6y64o4ld7xk6/h?rlkey=5dkze0ptoo7mnfpebpb7fn1p8&dl=0',
         short_desc: 'Come il famoso carnevale',
         pitch_sale: 'Allegro e pieno di energie. Adora giocare con i fratellini e scodinzola come un matto quando vede la ciotola.',
-        wheight_progress: [{ date: "12-02-24", weight: 1320 }, { date: "16-02-24", weight: 1650 }, { date: "17-02-24", weight: 1750 }, { date: "18-02-24", weight: 1805 }, { date: "21-02-24", weight: 1980 }, { date: "22-02-24", weight: 2075 }, { date: "23-02-24", weight: 2040 }, { date: "26-02-24", weight: 2250 }, { date: "28-02-24", weight: 2520 }, { date: "01-03-24", weight: 2900 }, { date: "03-03-24", weight: 3200 }, { date: "07-03-24", weight: 3900 }],
         gender: 'm',
         description:
           [
@@ -90,7 +86,6 @@ const Overview = (props) => {
         url:'https://www.dropbox.com/scl/fo/pwqth95p9gm4g01i9vc0c/h?rlkey=7x6wyt06kyexkm8w3cz8ll6rg&dl=0',
         short_desc: 'La piccola di casa',
         pitch_sale: 'Ogni riccio un capriccio',
-        wheight_progress:[{ date: "12-02-24", weight: [{ min: 1040, max: 1160 }] }, { date: "16-02-24", weight: 1315 }, { date: "17-02-24", weight: 1400 }, { date: "18-02-24", weight: 1450 }, { date: "21-02-24", weight: 1650 }, { date: "22-02-24", weight: 1720 }, { date: "23-02-24", weight: 1720 }, { date: "26-02-24", weight: 1870 }, { date: "28-02-24", weight: 2020 }, { date: "01-03-24", weight: 2270 }, { date: "03-03-24", weight: 2550 }, { date: "07-03-24", weight: 2900 }],
         gender: 'f',
         description:
           [

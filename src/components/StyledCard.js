@@ -63,19 +63,19 @@ export default function StyledCard(props) {
         switch (dog.adopted) {
             case '(STOP RICHIESTE)':
                 return 'rgba(255, 218, 185, 0.3)'
-            case '(Nuovamente disponibile!)':   
+            case '(Nuovamente disponibile!)':
                 return 'rgba(144, 238, 144, 0.3)'
             default:
                 return 'white'
         }
     }
     const openInNewTab = (url) => {
-  const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
-  if (newWindow) newWindow.opener = null
-}
+        const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+        if (newWindow) newWindow.opener = null
+    }
     const onClickUrl = (url) => {
         return () => openInNewTab(url)
-      }
+    }
 
     return (
 
@@ -92,6 +92,9 @@ export default function StyledCard(props) {
                         <ShareIcon />
                     </IconButton>
                 }
+                titleTypographyProps={{
+                    fontSize: 22,
+                  }}
                 title={dog.name}
                 subheader={<>{dog.short_desc} <br /> {dog.adopted}</>}
                 style={{ backgroundColor: getBackgroundColor() }}
