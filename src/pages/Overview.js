@@ -15,6 +15,22 @@ const Overview = (props) => {
   const dogs =
     [
       {
+        name: 'Coco',
+        adopted: '',
+        gender: 'f',
+        image: coco,
+        url:'https://www.dropbox.com/scl/fo/teqyfvxisou9l323w0xl7/h?rlkey=hjh5j98rokwqvufk0smatn8my&dl=0',
+        short_desc: 'Strapazzami di coccole',
+        pitch_sale: 'Ogni scusa e momento è buono per giocare, lo facciamo insieme?',
+        description:
+          [
+            "Coco è la cucciola più vivace e adorabile che tu possa immaginare! Il suo pelo riccio e scuro le conferisce un'aria di mistero e fascino, ma non lasciarti ingannare: dietro quell'aspetto c'è una vera birichina!",
+            "Questa piccola peste adora giocare senza sosta e non si stanca mai. È come una palla di energia pronta a esplodere in un turbine di divertimento! Basta guardare i suoi occhietti scintillanti e il suo musetto espressivo per capire che ogni momento con Coco sarà un'avventura indimenticabile.",
+            "Ma attenzione, perché Coco ha una piccola debolezza: le ciabatte! Le adora talmente tanto che a volte decide di rubarle e nasconderle chissà dove. Nonostante questo piccolo difetto, è impossibile resistere al suo fascino irresistibile.",
+            "Con Coco ogni giorno è una festa e non vedrai l'ora di trascorrere ogni momento con lei, ridendo e giocando insieme. È il tipo di cucciola che rende la vita un po' più spensierata e divertente, regalandoti sorrisi e allegria a non finire!"
+          ]
+      },
+      {
         name: 'Orso (Boris)',
         adopted: '(STOP RICHIESTE)',
         gender: 'm',
@@ -44,22 +60,6 @@ const Overview = (props) => {
             "Ma la sua vera passione? Le grattatine sul petto! Basta solo iniziare a coccolarla in quel punto e lei inizia a scodinzolare felice come se fosse in paradiso.",
             "È il tipo di cucciola che non vede l'ora di fare nuove amicizie e di giocare senza sosta. Con il suo sorriso contagioso e il suo atteggiamento spensierato è impossibile non innamorarsi di lei al primo sguardo.",
             "Bimba è la compagna perfetta per portare un po' di allegria e divertimento nella tua vita quotidiana. Non vedrai l'ora di trascorrere ogni istante con lei, condividendo momenti indimenticabili pieni di amore e divertimento!"
-          ]
-      },
-      {
-        name: 'Coco',
-        adopted: '',
-        gender: 'f',
-        image: coco,
-        url:'https://www.dropbox.com/scl/fo/teqyfvxisou9l323w0xl7/h?rlkey=hjh5j98rokwqvufk0smatn8my&dl=0',
-        short_desc: 'Giochiamo?!',
-        pitch_sale: 'Ogni scusa e momento è buono per giocare, lo facciamo insieme?',
-        description:
-          [
-            "Coco è la cucciola più vivace e adorabile che tu possa immaginare! Il suo pelo riccio e scuro le conferisce un'aria di mistero e fascino, ma non lasciarti ingannare: dietro quell'aspetto c'è una vera birichina!",
-            "Questa piccola peste adora giocare senza sosta e non si stanca mai. È come una palla di energia pronta a esplodere in un turbine di divertimento! Basta guardare i suoi occhietti scintillanti e il suo musetto espressivo per capire che ogni momento con Coco sarà un'avventura indimenticabile.",
-            "Ma attenzione, perché Coco ha una piccola debolezza: le ciabatte! Le adora talmente tanto che a volte decide di rubarle e nasconderle chissà dove. Nonostante questo piccolo difetto, è impossibile resistere al suo fascino irresistibile.",
-            "Con Coco ogni giorno è una festa e non vedrai l'ora di trascorrere ogni momento con lei, ridendo e giocando insieme. È il tipo di cucciola che rende la vita un po' più spensierata e divertente, regalandoti sorrisi e allegria a non finire!"
           ]
       },
       {
